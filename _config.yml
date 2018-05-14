@@ -1,0 +1,53 @@
+# Welcome to Nubia Jekyll Theme!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title:              Oz Gonen
+logo:               # Logo image URL
+description:        Thoughts, Stories and Ideas
+baseurl:            '' # The subpath of your site, e.g. /blog
+url:                'www.ozgonen.co.il' # The base hostname & protocol for your site
+
+markdown:  kramdown
+permalink: pretty
+paginate:  11
+sass:
+  style: compressed
+
+gems:
+  - jekyll-paginate
+  - jekyll/tagging
+
+include:
+  - _pages
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+# Pages path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+# Authors
+authors:
+  oz:
+    name:     עוז גונן
+    bio:      פיתוח ווב שמור רק לאלו שיש בהם אהבה אמיתית לקוד, חדשנות ופיקסל פרקפט
+    gravatar: /images/avatar.jpeg
+    email:    ozownz@gmail.com
+    website:  http://ozgonen.co.il
+    github:   https://github.com/ozgonen
