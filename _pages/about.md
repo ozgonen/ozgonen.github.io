@@ -4,8 +4,16 @@ title: אודות
 image: '/images/pages/about.jpg'
 ---
 
-You love minimalism, want to be productive focusing only on the important things and want to take jekyll to the next level, Nubia is designed for you. Nubia focus on showing your content in a clean and simple way, focus on images, typography, and white space.
+״לא. אתה צוחק עליי. בלוג בעברית?״
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+לא :) אני לא צוחק :)
 
-Lorem ipsum dolor sit amet, vix ut case porro facilisis, alia possit neglegentur vis te. Has cu eirmod abhorreant, vel civibus efficiantur cu. Eu summo elitr vix, iusto putant maluisset per ut, ne etiam vivendum adipisci vel. Vis omnis tempor accusam ei, justo perpetua liberavisse cu qui. Saperet aliquando adipiscing ius ne, ne facer euripidis est. Pro mundi nostrum suavitate et.
+קוראים לי עוז, אני מתכנת ווב בן 20 ומתגורר בת״א. אני מגדיר את עצמי כאדם עם מזל - שכן, זכיתי לעבוד בתחביב הגדול שלי :)
+
+אני כותב קוד מאז שאני זוכר את עצמי וכיום כותב אפליקציות ווב להנאתי :) החלטתי לכתוב את הבלוג הזה כי חיפשתי פלטפורמה לשתף את כל התשוקה שלי לטכנולוגיה הווב ואולי גם לעזור לאלו שמחפשים קצת מידע מעמיק. 
+
+
+
+אם יש לכם שאלות, צרו איתי קשר
+
+ozownz@gmail.com
