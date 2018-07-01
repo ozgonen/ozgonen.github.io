@@ -83,12 +83,7 @@ export class AppService {
 1. **Async Pipe**
 
    אפשר להרשם לObservables דרך הטמפלט של אנגולר, בעזרת Async Pipe. הייתרון המשמעותי זה שאנגולר מנהל עבורנו את כל ההרשמה במהלך כל אורך החיים (Life Cycle) של הקומפוננטה. אנגולר ירשם ויבטל את ההרשמה עבורנו שזה ממש כיף.
-
-   
-
-   1. 
-
-   ```ts
+```ts
    import { Component, OnInit } from '@angular/core';
    import { AppService } from '../app.service';
    import { Observable } from 'rxjs';
@@ -113,7 +108,7 @@ export class AppService {
        this.users$ = this.appService.getUsers();
      }
    }
-   ```
+```
 
    שימו לב לסימן הדולר $ ! זה מסמן לנו שהמשתנה הוא Observable וזה נחשב Best Practive. בדרך הזאת, קבל לזהות שהמשתנה הוא Observable או לא.
 
