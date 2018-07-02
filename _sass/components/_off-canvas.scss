@@ -7,7 +7,7 @@ $off-canvas-width: 300px;
 .c-off-canvas-toggle {
   position: absolute;
   top: double($base-spacing-unit) + half($base-spacing-unit);
-  right: $base-spacing-unit + quarter($base-spacing-unit);
+  left: $base-spacing-unit + quarter($base-spacing-unit);
   z-index: 10;
   height: 24px;
   width: 24px;
