@@ -1,16 +1,9 @@
-# Welcome to Nubia Jekyll Theme!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title:              Oz Gonen
 logo:               # Logo image URL
 description:        Thoughts, Stories and Ideas
 baseurl:            '' # The subpath of your site, e.g. /blog
-url:                'www.ozgonen.co.il' # The base hostname & protocol for your site
+url:                'http://www.ozgonen.co.il' # The base hostname & protocol for your site
 
 markdown:  kramdown
 permalink: pretty
