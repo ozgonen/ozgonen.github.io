@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction to Reactive Programming - 2
+title: תכנות ריאקטיבי - הלכה למעשה
 description: "מה שממש קשה להבין מכל החפירה שעשיתי זה איך לעזאזל עובדים עם זה."
 modified: 2016-04-12T15:27:45-04:00
 comments: true
@@ -85,7 +85,6 @@ export class PokemonComponent implements OnInit {
   private fetchData(metaData = null) {
     this.appService
       .getPokemon(metaData)
-      .take(1)
       .subscribe(data => this.handleResponse(<ApiResponse>data));
   }
 
@@ -267,10 +266,8 @@ export class PokemonComponent implements OnInit, OnDestroy {
   }
 
   private fetchData(metaData = null) {
-    console.log(metaData)
     this.appService
       .getPokemon(metaData)
-      .take(1)
       .subscribe(data => this.handleResponse(<ApiResponse>data));
   }
 
