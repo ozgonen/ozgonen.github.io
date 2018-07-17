@@ -5,7 +5,7 @@ description: "אנגולר? לגמרי הבחירה הראשונה שלי שאנ
 modified: 2016-04-12T15:27:45-04:00
 comments: true
 author: oz
-tags: [Testing]
+tags: [Angular]
 image: '/images/posts/2018-07-11-why-angular-should-be-you-first-choice.jpg'
 
 ---
