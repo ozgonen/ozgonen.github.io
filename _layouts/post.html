@@ -7,7 +7,7 @@ layout: default
 {% assign author = site.authors[page.author] %}
 
 {% if page.image %}
-  <meta itemprop='og:image' content='{{ base_path }}{{ page.image }}'>
+  <meta property='og:image' content='{{ base_path }}{{ page.image }}'>
 {% endif %}
 
 {% include post-hero.html %}
