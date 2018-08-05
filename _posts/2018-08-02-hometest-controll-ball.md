@@ -238,11 +238,7 @@ export class ControlComponent {
 
 ![movingBall](/images/gifs/movingBall.gif)
 
-אפשר לראות את כל הקוד כאן
+אפשר לראות את כל הקוד [כאן](https://github.com/ozgonen/MovingBall) או [כאן](https://stackblitz.com/github/ozgonen/MovingBall) 
 
-[https://github.com/ozgonen/MovingBall](https://github.com/ozgonen/MovingBall ) 
-
-ואפשר לראות את התוצאה כאן
-
-[https://rlmiqygw.github.stackblitz.io](https://rlmiqygw.github.stackblitz.io)
+ואפשר לראות את התוצאה [ישר כאן](https://rlmiqygw.github.stackblitz.io)
 
