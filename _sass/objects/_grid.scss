@@ -28,6 +28,7 @@ $grid-gutter: $base-spacing-unit;
 .o-grid__col {
   padding-right: $grid-gutter;
   padding-left: $grid-gutter;
+  width: 100%;
 
   @include mq($from: tablet) {
     flex-grow: 1;
