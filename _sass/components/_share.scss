@@ -10,7 +10,7 @@
     text-align: center;
 
     &:not(:last-child) {
-      border-right: quarter($base-spacing-unit) solid $color-white;
+      border-left: quarter($base-spacing-unit) solid $color-white;
     }
   }
 
