@@ -53,6 +53,10 @@ image: '/images/posts/2018-02-02-hometest-controll-ball.jpg'
 
 הקומפוננטת אבא, תחזיק את הילדים כמו שאמרנו:
 
+
+
+<script src="https://gist.github.com/ozgonen/1fd9418c06f0f11dbef6549f84388d07.js"></script>
+
 **app.component.html**
 
 ```html
