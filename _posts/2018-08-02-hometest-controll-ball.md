@@ -55,7 +55,7 @@ image: '/images/posts/2018-02-02-hometest-controll-ball.jpg'
 
 **app.component.html**
 
-```Html
+```html
 <app-screen
   [ngStyle]="{'width' : screenWidth, 'height': screenHeight}"
   [moveBall]="newBallDirection"
