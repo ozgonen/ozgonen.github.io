@@ -240,9 +240,9 @@ export class ControlComponent {
 
 אפשר לראות את כל הקוד כאן
 
-https://github.com/ozgonen/MovingBall 
+[https://github.com/ozgonen/MovingBall](https://github.com/ozgonen/MovingBall ) 
 
 ואפשר לראות את התוצאה כאן
 
-https://rlmiqygw.github.stackblitz.io
+[https://rlmiqygw.github.stackblitz.io](https://rlmiqygw.github.stackblitz.io)
 
