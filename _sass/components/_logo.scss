@@ -26,15 +26,15 @@
   }
 
   &__img {
-    max-height: double($base-spacing-unit);
+    max-height: double(50px);
 
     @include mq($from: tablet) {
       margin: 0 auto;
-      max-height: triple($base-spacing-unit);
+      max-height: triple(50px);
     }
 
     @include mq($from: desktop) {
-      max-height: quadruple($base-spacing-unit);
+      max-height: quadruple(50px);
     }
   }
 }
