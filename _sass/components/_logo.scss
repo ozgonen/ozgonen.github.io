@@ -15,6 +15,7 @@
     font-family: $font-serif;
     font-size: double($font-size-tiny);
     transition: color $global-transition ease-in-out;
+    margin-top: 15px;
 
     @include mq($from: tablet) {
       font-size: double($font-size-base);
