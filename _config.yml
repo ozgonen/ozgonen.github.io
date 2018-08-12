@@ -1,6 +1,6 @@
 # Site settings
 title:              Oz Gonen
-logo:               # Logo image URL
+logo:               http://www.ozgonen.co.il/images/logo.jpg
 description:        Thoughts, Stories and Ideas
 baseurl:            '' # The subpath of your site, e.g. /blog
 url:                'http://www.ozgonen.co.il' # The base hostname & protocol for your site
