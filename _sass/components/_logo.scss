@@ -27,10 +27,10 @@
   }
 
   &__img {
+    margin: 0 auto;
     max-height: double(50px);
 
     @include mq($from: tablet) {
-      margin: 0 auto;
       max-height: triple(50px);
     }
 
