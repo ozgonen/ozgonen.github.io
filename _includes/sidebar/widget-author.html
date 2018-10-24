@@ -30,6 +30,14 @@
           </li>
         {% endif %}
 
+        {% if author.linkedin %}
+        <li class='c-author__links-item'>
+          <a href='{{ author.linkedin }}' aria-label='Linkedin' target='_blank' rel='noopener'>
+            <span class='c-author__links-icon' data-icon='ei-sc-linkedin' data-size='s'></span>
+          </a>
+        </li>
+        {% endif %}
+
         {% if author.email %}
           <li class='c-author__links-item'>
             <a href='mailto:{{ author.email }}' aria-label='Email' target='_blank' rel='noopener'>
