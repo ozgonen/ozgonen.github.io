@@ -5,35 +5,35 @@ description: "בואו מעביר מקומפוננטה אחות וישר נצי�
 modified: 2016-04-12T15:27:45-04:00
 comments: true
 author: oz
-tags: [Home Tests]
-image: '/images/posts/2018-02-02-hometest-controll-ball.jpg'
+tags: [HomeTests]
+image: '/images/posts/2019-11-27-hometest-weather-app.jpg'
 
 ---
 
 
 
-לאחר תקופת צינון, אני ממשיך עם הצגת פתרונות מטלות בית. 
+לאחר תקופת צינון, אני ממשיך עם הצגת פתרונות מטלות בית.
 
 אם פספסתם את המאמר הקודם, אפשר למצוא אותו [כאן](http://www.ozgonen.co.il/2018/08/02/hometest-controll-ball/).
 
 #### מבחן בית מס׳ 2 - אפליקציית מזג אוויר
 
-![juggle](/images/gifs/juggle.gif)
+![juggle](/images/gifs/weather.gif)
 
 **רמת קושי:** מתכנת מתחיל
 
-**תיאור**: צרו אפליקציה שמציגה את מזג האוויר. 
+**תיאור**: צרו אפליקציה שמציגה את מזג האוויר.
 
-השתמשו בAPI של [AccuWeather](https://developer.accuweather.com/) - בשביל לבצע [AutoComplete](https://developer.accuweather.com/accuweather-locations-api/apis/get/locations/v1/cities/autocomplete), [Current Weather](https://developer.accuweather.com/accuweather-current-conditions-api/apis/get/currentconditions/v1/%7BlocationKey%7D), [5 Day forecast](https://developer.accuweather.com/accuweather-forecast-api/apis/get/forecasts/v1/daily/5day/%7BlocationKey%7D). 
+השתמשו בAPI של [AccuWeather](https://developer.accuweather.com/) - בשביל לבצע [AutoComplete](https://developer.accuweather.com/accuweather-locations-api/apis/get/locations/v1/cities/autocomplete), [Current Weather](https://developer.accuweather.com/accuweather-current-conditions-api/apis/get/currentconditions/v1/%7BlocationKey%7D), [5 Day forecast](https://developer.accuweather.com/accuweather-forecast-api/apis/get/forecasts/v1/daily/5day/%7BlocationKey%7D).
 
 **דרישות:** צרו 2 עמודים שאפשר לנווט בינהם:
 
 1. עמוד בית - יציג שדה חיפוש שבו אפשר לחפש מזג אוויר לפי מיקום. הקומופננטה תהיה auto completed. מתחתיו, יהיה מזג האוויר לחמשת הימים של המיקום שהוקלד. המיקום יוכל להישמר/להמחק מ״מועדפים״, כאשר תהיה אינדיקציה אם הוא נמצא שם. המיקום הדיפולטיבי הוא ת״א.  (בונוס, להשתמש [בgeoloaction api](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API))
    * בונוס: להוסיף טוגל של dark/light theme
    * בונוס: להוסיף טוגל של Celsius/Fahrenheit
-2. עמוד מועדפים - יציג את רשימת המועדפים. כל מיקום מועדף יציג את השם שלו ואת המזג האוויר הנוכחי. לחיצה עליו, תנווט לעמוד הבית עם המיקום הנבחר. 
+2. עמוד מועדפים - יציג את רשימת המועדפים. כל מיקום מועדף יציג את השם שלו ואת המזג האוויר הנוכחי. לחיצה עליו, תנווט לעמוד הבית עם המיקום הנבחר.
 
-* כל החיפושים יהיו באנגלית. 
+* כל החיפושים יהיו באנגלית.
 * חובה להשתמש בstate managment.
 
 **[אפשר לראות את הקוד כאן](https://qgnirjkrb.github.stackblitz.io)**
@@ -52,7 +52,7 @@ ng g weatherApp --style=scss --skipTests=true --routing=true
 
 אחרי שסיימנו ליצור את הפרוייקט, ניצור 2 קומפוננטות עבור כל אחד מהעמודים, ונתחיל לעצב את עמוד הבית.
 
-נרצה לבנות Header, שיכיל את הניווט של האפליקציה, את החלפת המצבים והטמפרטורה. 
+נרצה לבנות Header, שיכיל את הניווט של האפליקציה, את החלפת המצבים והטמפרטורה.
 
 #### ניווט
 
@@ -64,7 +64,7 @@ ng g weatherApp --style=scss --skipTests=true --routing=true
 
 ```html
   <nav>
-    <a routerLink="/" routerLinkActive="active" 
+    <a routerLink="/" routerLinkActive="active"
        [routerLinkActiveOptions]="{exact:true}">index</a>
     <a routerLink="/fav" routerLinkActive="active">fav</a>
   </nav>
@@ -107,7 +107,7 @@ ng g weatherApp --style=scss --skipTests=true --routing=true
 
 ### עמוד הבית
 
-דבר ראשון שנרצה, כשהקומפוננטה עולה, זה להשיג את המיקום הגאוגרפי של המשתמש. 
+דבר ראשון שנרצה, כשהקומפוננטה עולה, זה להשיג את המיקום הגאוגרפי של המשתמש.
 
 
 
@@ -128,11 +128,11 @@ ng g weatherApp --style=scss --skipTests=true --routing=true
   }
 ```
 
-נגיד באופן דיפולטיבי את הקורדיננטות של ת״א, שהשגתי [כאן](https://www.latlong.net/place/tel-aviv-yafo-israel-7174.html) ובhook של אנגולר ngOnInit,  השתמשתי בapi geolocation להקפיץ למשתמש את ההודעה אם הוא מרשה לאפליקציה לקבל מידע הגאוגרפי שלו. במידה וכן, אני דורס את המידע הדיפולטיבי שהגדרתי. 
+נגיד באופן דיפולטיבי את הקורדיננטות של ת״א, שהשגתי [כאן](https://www.latlong.net/place/tel-aviv-yafo-israel-7174.html) ובhook של אנגולר ngOnInit,  השתמשתי בapi geolocation להקפיץ למשתמש את ההודעה אם הוא מרשה לאפליקציה לקבל מידע הגאוגרפי שלו. במידה וכן, אני דורס את המידע הדיפולטיבי שהגדרתי.
 
-הדבר הבא, הוא להתחיל להשתמש בקריאות API. נתחיל בלהרשם ל[accuweather](https://developer.accuweather.com/) ונתחבר. 
+הדבר הבא, הוא להתחיל להשתמש בקריאות API. נתחיל בלהרשם ל[accuweather](https://developer.accuweather.com/) ונתחבר.
 
-ארצה לבנות service שינהל את כל הקריאות API, הקריאה הראשונה היא תהיה [קריאה בשביל להמיר את המידע של הקורדינטות](https://developer.accuweather.com/accuweather-locations-api/apis/get/locations/v1/cities/geoposition/search) למידע שאוכל להשתמש, locationKey - בשביל Current Conditions. אשתמש בפונקציה גנרית, שתבנה לי את ה HttpParams, ותוסיף את ה API_KEY במקום אחד. 
+ארצה לבנות service שינהל את כל הקריאות API, הקריאה הראשונה היא תהיה [קריאה בשביל להמיר את המידע של הקורדינטות](https://developer.accuweather.com/accuweather-locations-api/apis/get/locations/v1/cities/geoposition/search) למידע שאוכל להשתמש, locationKey - בשביל Current Conditions. אשתמש בפונקציה גנרית, שתבנה לי את ה HttpParams, ותוסיף את ה API_KEY במקום אחד.
 
 app.service.ts
 
@@ -166,7 +166,7 @@ app.service.ts
   }
 ```
 
-השלב הבא, הוא לקבל את התחזית הרלוונטית. ארצה גם לבנות String, שיכיל את השם של העיר שאותה אני מחפש. 
+השלב הבא, הוא לקבל את התחזית הרלוונטית. ארצה גם לבנות String, שיכיל את השם של העיר שאותה אני מחפש.
 
 index.component.ts
 
@@ -242,7 +242,7 @@ export class AccuweatherIconPipe implements PipeTransform {
 
 
 
-ניצור Subject שינהל את הקלדת התווים ונשתמש באופרטורים debounceTime וswitchMap בשביל לוודא שלא נציף את השרת בקריאות מיותרות. 
+ניצור Subject שינהל את הקלדת התווים ונשתמש באופרטורים debounceTime וswitchMap בשביל לוודא שלא נציף את השרת בקריאות מיותרות.
 
 בכל לחיצה על תוצאה, נקח את המידע ונבצע קריאה נוספת עם המידע החדש.
 
@@ -271,7 +271,7 @@ export class AccuweatherIconPipe implements PipeTransform {
 
 ### מועדפים
 
-בתרגיל הזה, ביקשו מאיתנו להשתמש ב state managment. אני חושב שבמקרה הזה ngrx/mobx זה ממש overkill, והייתי מציע להשתמש במשהו פשוט יותר, לדוגמא [Observable Store](https://blog.codewithdan.com/simplifying-front-end-state-management-with-observable-store/). לא הייתי משתמש בספרייה הזאת בproducation, אלא יוצר [סרביס כזה בעצמי](https://dev.to/steveblue/redux-with-observable-stores-in-angular-1b3b) - או באמת משתמש בngrx/mobx. 
+בתרגיל הזה, ביקשו מאיתנו להשתמש ב state managment. אני חושב שבמקרה הזה ngrx/mobx זה ממש overkill, והייתי מציע להשתמש במשהו פשוט יותר, לדוגמא [Observable Store](https://blog.codewithdan.com/simplifying-front-end-state-management-with-observable-store/). לא הייתי משתמש בספרייה הזאת בproducation, אלא יוצר [סרביס כזה בעצמי](https://dev.to/steveblue/redux-with-observable-stores-in-angular-1b3b) - או באמת משתמש בngrx/mobx.
 
 אני אתקין את החבילה מnpm
 
@@ -279,7 +279,7 @@ export class AccuweatherIconPipe implements PipeTransform {
 npm install @codewithdan/observable-store
 ```
 
- ואצור סרביס חדש, בשם weather.service.ts 
+ ואצור סרביס חדש, בשם weather.service.ts
 
 <script src="https://gist.github.com/ozgonen/f022994b9142ead0b09749ab485c60d6.js"></script>
 
